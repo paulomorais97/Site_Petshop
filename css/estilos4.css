@@ -1,0 +1,293 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 10px 0;
+	font-family: "Lucida Sans";
+	background: url(https://avada.theme-fusion.com/veterinarian/wp-content/uploads/sites/80/2016/11/pets_big.png) bottom center no-repeat;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	border : 2px solid #e95a32;
+	background: rgba(255,255,255,.8);
+}
+
+#header {
+	height: 200px ;
+	width: 100%;
+	position: relative;
+}
+
+#login {
+	width: 400px;
+	height: 130px;
+	display: block;
+	position: absolute;
+	top: 35px;
+	right: 50px;
+	
+	background: rgba(13,100,160,0.8);
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+
+form {
+	padding-top: 10px;
+}
+
+form label {
+	display: inline-block;
+	width: 20%;
+	color: white;
+}
+
+form input {
+	display: inline-block;
+	width: 75%;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+form input[type="submit"], .botao{
+	background: rgba(233,90,50,1);
+	color: white;
+	width: 100px;
+	font-weight: bold;
+	float: right;
+	margin-right: 12px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+form input[type="submit"]:hover, .botao:hover{
+	background: rgba(13,100,160,1);
+}
+
+
+#menu {
+	padding: 0px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color:#0d64a0;
+}
+
+#menu ul {
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+#menu ul li { 
+	position: : relative;
+	display: inline-block;
+	padding: 0;
+}
+
+#menu ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 6px 10px;
+	display: block;
+	background: #0d64a0;
+	transition: all .2s ease;
+	font-size: 15px;
+}
+
+#menu ul li a:hover {
+	color: orange;
+	background: #055184;
+}
+
+#menu ul li ul {
+	position:absolute; 
+	display:none;
+	width: 150px;
+	text-align: left;
+	z-index: 9999;
+}
+
+#menu ul li:hover ul, #menu ul li.over ul{
+	display:block;
+}
+
+#menu ul li ul li{
+	display:block; 
+	width:150px;
+	background-color:#0d64a0;
+}
+#menu ul li ul li a{
+	padding: 4px 10px;
+}
+
+
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1} 
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1} 
+}		  
+
+#conteudo {
+	margin-bottom: 50px;
+}
+
+#conteudo h1 {	
+	text-align : center ;
+	text-decoration : bold ;
+	color : #e95a32 ;
+	font-size : 40px ;
+	margin-bottom: 10px;
+}
+
+.central{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+.colunas{
+	width: 285px;
+	border: 1px solid #e5e5e5;
+	margin: 12px 12px;
+	padding: 10px 0px;
+	box-sizing: border-box;
+	display: none;
+	border-radius: 5px;
+}
+
+.colunas h2{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.colunas .image {
+	width: 100%;
+	max-width: 100%;
+	height: 800px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.colunas p{
+	font-size: 14px;
+	text-align: left;
+	padding: 10px;
+}
+
+#rodape {
+	width: 100%;
+	padding: 10px 10px;
+	border-top: 1px dotted gray;
+}
+
+#rodape a {
+	display: inline-block;
+	margin-left: 5px;
+	color: white;
+	outline: none;
+	text-decoration: none;
+	background: black;
+	padding: 5px 0;
+	border-radius: 3px;
+	transition: all .3s ease;
+	width: 25px;
+	text-align: center;
+}
+
+#rodape a:hover{
+	background: #0d64a0;
+	color: rgba(233,90,50,1);
+}
+
+#rodape span{
+	float: right;
+	margin-top: 10px;
+font-size: 12px}
+
+
+#detalhes {
+	width: 45%;
+    margin: 18px;
+    margin-left:25%; 
+	color:#00BFFF;
+	font-family:Helvetica, sans-serif;
+	font-stretch: ultra-condensed;
+	font-size:32px;
+	border: solid #696969 1px ;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: blue;
+	
+}
+#imagem {
+	height:393px;
+	width:380px;
+	float:left;
+	margin-bottom:15px;
+	margin-top:-20px;
+	border:solid  black 2px;
+	margin-right:5px;
+	margin-left:10px;
+}
+
+#descrição
+{	float:left;
+	margin-right:10px;
+	margin-left:10px;
+	width:25%;
+	font-family:Times New Roman, serif;
+	font-size:25px;
+	color:#6A5ACD;
+}
+
+#texto1 { 	  margin-left:4px;
+			  margin-bottom:10px;
+			  margin-top:10px; 
+			  font-size:18px;
+		      font-family:Parkavenue, cursive;	
+			  font-style: oblique;	
+}
+
+#imagem2 {
+	margin-left:15%;
+	margin-bottom:15px;
+	border:solid black 1px;
+	margin-top:10px;
+	}
+
+.link {
+	margin-left:4%;
+	text-decoration:none;
+}
+
+#link {
+	font-family:Parkavenue, cursive;
+	font-size:16px;
+	margin-left:5%;
+	color:#6A5ACD;
+	
+}

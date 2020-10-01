@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Distrito dos Pets</title>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link	rel="stylesheet"
+				type="text/css"
+				href="css/estilos.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" class="active" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html"  title="Contato">Contato</a></li>
+					
+				</ul>
+			</div>
+
+
+			<div id="conteudo">
+			<h1>Carrinho de Compras</h1>
+				
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Carrinho Drag and Drop</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+
+        <style>
+		*, html{ font-family: Helvetica, arial, sans-serif; margin: 0 0; padding: 0 0; }
+        body{ margin: 0 0; padding: 0 0; background-color:#D6D1CA; }
+		h1{ color: #594A40; letter-spacing:-2px ;text-align:center;font-size:46px;font-family:Helvetica, arial,sans-serif;text-transform:uppercase;margin:30px 0 0;}
+		div#container{ margin: 0 auto; width:960px; }
+
+		p{ margin: 10px 10px; }
+				ul#produtos{ list-style:none; }
+        div#carrinho-top{
+			background-color: #C92D21;
+			width: 960px;
+			color: #fff;
+			border-bottom:1px dashed #fff;
+			opacity: .8;
+			position:relative;
+	 	}
+		div#carrinho-info{ padding: 10px; }
+		div#carrinho-container{
+			height:240px;
+			position:absolute;
+			width:240px;
+			background-color:#fff;
+			border:2px solid #c92d21;
+			display:none;
+		}
+		div#carrinho-container ul{ overflow:auto; height:200px; margin: 10px; list-style:none; }
+		div#carrinho-container ul li{ color:#333; font-size:12px; border-bottom:1px dotted #ccc; text-align:center; margin:10px; }
+
+		ul#produtos li{
+			float: left;
+			background-color:#fff;
+			-moz-box-shadow: 5px 5px 5px #ccc;
+			  -webkit-box-shadow: 5px 5px 5px #ccc;
+			  box-shadow: 5px 5px 5px #ccc;
+			padding:10px;
+			margin:15px;
+			width:270px;
+			text-align:center;
+		}
+		ul#produtos li h3{
+			margin: 6px 0 6px 0;
+			color: #594A40;
+			background-color:#f2f2f2;
+			padding:6px;
+		}
+		p.preco-de{
+			color:red;
+			text-decoration:line-through;
+			font-size:11px;
+		}
+		p.preco-por{
+			color: #594A40;
+			font-weight:900;
+		}
+		.ui-state-hover{
+			height:160px;
+			border:4px dashed #000;
+		}
+        </style>
+
+    </head>
+    <body>
+
+
+
+		<div id="container">
+
+	        <div id="carrinho-top">
+				<div id="carrinho-info">
+					<p>Arraste produtos para esta área</p>
+				</div>
+				<div id="carrinho-container">
+	            	<ul id="carrinho-produtos">
+						<li class="adicione">Arraste produtos para esta área</li>
+					</ul>
+				</div>
+	        </div>
+
+			
+
+			<ul id="produtos">
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="1" /><h3>Ração 1</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$13,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="2" /><h3>Ração 2</h3><p><img src="img/racao.jpg" width="75" height="90" /><p class="preco-por">Por: R$20,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="3" /><h3>Ração 3</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$14,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="4" /><h3>Ração 4</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$18,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="5" /><h3>Ração 5</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$18,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="6" /><h3>Ração 6</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$10,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="7" /><h3>Ração 7</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$11,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="8" /><h3>Ração 8</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$13,00</p></li>
+				<li class="produto-dd"><input type="hidden" class="produto-id" value="9" /><h3>Ração 9</h3><p><img src="img/racao.jpg" width="75" height="90" /></p><p class="preco-por">Por: R$19,00</p></li>
+			</ul>
+			<br>
+			<a class="botao" href="pagamento.html">Finalizar Pedido</a>
+			
+
+
+			</div>
+			
+			
+
+    <script type="text/javascript">
+	var timerCarrinho = '';
+    $(function(){
+
+		$(window).scroll(function(){
+            var wtop	 	= $(this).scrollTop();
+			var carrinho 	= $('#carrinho-top');
+			var container	= $('#container');
+			var cheight 	= $(carrinho).height();
+            if( wtop > ( cheight / 2 ) )
+            {
+				$(container).css('margin-top', cheight+'px');
+                $(carrinho)
+					.css({
+	                    position: 'absolute'
+	                })
+					.animate({
+						marginTop: ( wtop - cheight ) + 'px'
+					}, 100);
+            }
+            else
+            {
+				$(container).css('margin-top', 0);
+                $(carrinho)
+					.stop(true, true)
+					.css({
+	                    position: 'relative',
+						marginTop: 0
+	                });
+            }
+        });
+
+		$('#produtos li').draggable({
+			helper: 'clone',
+			start: function()
+			{
+				clearTimeout( timerCarrinho );
+				$('#carrinho-container').show();
+			}
+		});
+
+		$('#carrinho-produtos').droppable({
+			hoverClass: 'ui-state-hover',
+			accept: '.produto-dd',
+			drop: function( event, ui )
+			{
+				$(this).find('.adicione').remove();
+				var cod = ui.draggable.find('.produto-id').val();
+				if( $(this).find('#clone-'+cod).length == 0 )
+				{
+					$('<li id="clone-'+cod+'" style="display:none;"></li>').html(ui.draggable.html()).prependTo( this );
+					$(this).find('li:first').slideDown();
+					var total_produtos = $(this).find('li').length;
+					$('#carrinho-info').html('<p>' + total_produtos + ' produto' + ( total_produtos > 1 ? 's' : '' ) + '</p>' );
+				}
+			}
+		});
+
+		$('#carrinho-container').mouseenter(function(){
+			clearTimeout( timerCarrinho );
+		});
+
+		$('#carrinho-container').mouseleave(function(){
+			var carrinho = $(this);
+			timerCarrinho = setTimeout( function(){
+				$(carrinho).slideUp();
+			}, 5000 );
+		});
+
+
+    });
+    </script>
+
+
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="https://web.facebook.com/Petshop-Distrito-dos-Pets-2032756690321103/"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/distritodospets/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+	</body>
+</html>

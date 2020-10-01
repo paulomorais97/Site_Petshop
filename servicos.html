@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Distrito dos Pets</title>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link	rel="stylesheet"
+				type="text/css"
+				href="css/estilos.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+			
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" class="active" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html" title="Contato">Contato</a></li>
+				</ul>
+			</div>
+
+			
+
+
+
+						<div id="conteudo">
+				<h1>Serviços</h1>
+
+				<div class="central">
+				
+					<div class="colunas">
+						<h2>Consulta Veterinária</h2>
+					
+						<div class="image" style="background-image: url(https://cdn.pixabay.com/photo/2014/12/16/05/27/kitten-569956_960_720.jpg);">
+						</div>
+						<p>Consulta clínica para avaliação de rotina e tratamento de doenças que acometem os animais domésticos. Pode ser realizada no consultório ou à domicílio, em ambos os casos, necessita.</p>
+						
+					</div>
+					<div class="colunas">
+						<h2>Vacinação</h2>
+						<div class="image" style="background-image: url(https://cdn.pixabay.com/photo/2016/12/05/19/49/syringe-1884784_960_720.jpg);">
+						</div>
+						<p>Manter a carteirinha de vacinas atualizada é fundamental para a saúde de seu pet, pois a vacinação ainda é o método de proteção mais confiável e eficaz contra as doenças infecciosas.</p>
+						
+					</div>
+					<div class="colunas">
+						<h2>Banho e Tosa</h2>
+						<div class="image" style="background-image: url(https://image.freepik.com/fotos-gratis/no-more-banheira_2585862.jpg);">
+						</div>
+						<p>Banho é importante e todo mundo gosta! Além de deixar o animal cheiroso, o banho é algo fundamental para a saúde dele. Como uma maneira prática e econômica de manter seu pet.</p>
+						
+					</div>
+
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); }
+		</script>
+	</body>
+</html>

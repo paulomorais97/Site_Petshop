@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Distrito dos Pets</title>
+
+		<!-- CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.s0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" class="active" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html" title="Contato">Contato</a></li>
+					
+				</ul>
+			</div>
+
+			<div class="slideshow-container">
+
+				<p class="mySlides fade">
+				  <img src="img/foto.png" style="width:100%">
+				</p>
+
+				<p class="mySlides fade">
+				  <img src="img/vetslide.png" style="width:100%">
+				</p>
+
+				<p class="mySlides fade">
+				  <img src="img/adocaoslide.png" style="width:100%">
+				</p>
+
+			</div>
+
+			<p class="dots">
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			</p>
+
+
+
+			<div id="conteudo">
+				<h1>Destaques</h1>
+
+				<div class="central">
+				
+					<div class="colunas">
+						<h2>Galeria</h2>
+						<div class="image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmNdih3YTndyz-bz1ckfKT91ek0x0eUl7FgKIwRnPw-abI7KnH);">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolor quaerat commodi accusamus, optio distinctio. Quis excepturi vitae harum praesentium ab suscipit quam accusamus, modi aut autem quos error quidem!</p>
+						<a class="botao" href="galeria.html">Leia Mais</a>
+					</div>
+					<div class="colunas">
+						<h2>Blog</h2>
+						<div class="image" style="background-image: url(http://www.paraibaradioblog.com/wp-content/uploads/2017/10/Foto1-266.jpg.pagespeed.ce.q5JjlS5NLb.jpg);">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolor quaerat commodi accusamus, optio distinctio. Quis excepturi vitae harum praesentium ab suscipit quam accusamus, modi aut autem quos error quidem!</p>
+						<a class="botao" href="blog.html">Leia Mais</a>
+					</div>
+					<div class="colunas">
+						<h2>Eventos</h2>
+						<div class="image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UySoyHDdQUH2HVxvoWw-HwCqTn4jYWu9MX_rZRlfSSL_vtHfiw);">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dolor quaerat commodi accusamus, optio distinctio. Quis excepturi vitae harum praesentium ab suscipit quam accusamus, modi aut autem quos error quidem!</p>
+						<a class="botao" href="eventos.html">Leia Mais</a>
+					</div>
+
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="https://web.facebook.com/Petshop-Distrito-dos-Pets-2032756690321103/"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/distritodospets/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,603 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 10px 0;
+	font-family: "Lucida Sans";
+	background: url(https://avada.theme-fusion.com/veterinarian/wp-content/uploads/sites/80/2016/11/pets_big.png) bottom center no-repeat;
+}
+
+h1{
+	margin-bottom: 10px;
+}
+
+h4{
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+h5{
+	display: block;
+	border-bottom: 2px solid black;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+img{
+	width: 100%;
+	max-width: 100%;
+}
+
+p{
+	text-align: left;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+p.mySlides{
+	padding: 0;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	border : 2px solid #e95a32;
+	background: rgba(255,255,255,.8);
+}
+
+#header {
+	height: 200px ;
+	width: 100%;
+	position: relative;
+	background: url(../img/header.png) no-repeat;
+}
+
+#login {
+	width: 400px;
+	height: 130px;
+	display: block;
+	position: absolute;
+	top: 35px;
+	right: 50px;
+	/*background: rgba(233,90,50,0.5);*/
+	background: rgba(13,100,160,0.8);
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+
+form {
+	padding-top: 10px;
+}
+
+form label {
+	display: inline-block;
+	width: 20%;
+	color: white;
+}
+
+form input {
+	display: inline-block;
+	width: 75%;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+form input[type="submit"], .botao{
+	background: rgba(233,90,50,1);
+	color: white;
+	width: 100px;
+	font-weight: bold;
+	float: right;
+	margin-right: 12px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+form input[type="submit"]:hover, .botao:hover{
+	background: rgba(13,100,160,1);
+}
+
+.botao {
+	font-size: 12px;
+}
+
+#menu {
+	padding: 0px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color:#0d64a0;
+}
+
+#menu ul {
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+#menu ul li { 
+	position: : relative;
+	display: inline-block;
+	padding: 0;
+}
+
+#menu ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 6px 10px;
+	display: block;
+	background: #0d64a0;
+	transition: all .2s ease;
+	font-size: 15px;
+}
+
+#menu ul li a:hover, #menu ul li a.active {
+	color: orange;
+	background: #055184;
+}
+
+#menu ul li ul {
+	position:absolute; 
+	display:none;
+	width: 150px;
+	text-align: left;
+	z-index: 9999;
+}
+
+#menu ul li:hover ul, #menu ul li.over ul{
+	display:block;
+}
+
+#menu ul li ul li{
+	display:block; 
+	width:150px;
+	background-color:#0d64a0;
+}
+#menu ul li ul li a{
+	padding: 4px 10px;
+}
+
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	z-index: 0;
+}
+
+.mySlides {
+	display: none;
+	z-index: 0;
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0; 
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px; 
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8); 
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center; 
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0; 
+}
+
+.dots {
+	text-align:right; 
+	margin-right: 10px; 
+	margin-top: 10px
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	z-index: 9999;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171; 
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s; 
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1} 
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1} 
+}		  
+
+#conteudo {
+	margin-bottom: 50px;
+}
+
+#conteudo h1 {	
+	text-align : center ;
+	text-decoration : bold ;
+	color : #e95a32 ;
+	font-size : 40px ;
+	margin-bottom: 20px;
+}
+
+.central{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+.colunas{
+	width: 275px;
+	border: 1px solid #e5e5e5;
+	margin: 10px 10px;
+	padding: 10px 0px;
+	box-sizing: border-box;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.colunas4{
+	width: 200px;
+	border: 1px solid #e5e5e5;
+	margin: 10px 10px;
+	padding: 10px 0px;
+	box-sizing: border-box;
+	display: inline-block;
+	border-radius: 5px;
+	
+}
+
+.colunas h2, .colunas4 h2{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.colunas .image, .colunas4 .image {
+	width: 100%;
+	max-width: 100%;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.colunas p, .colunas4 p{
+	font-size: 14px;
+	text-align: left;
+	padding: 10px;
+}
+
+.colunas4 .valor{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.colunas4 .botao{
+	display: block;
+	text-align: center;
+	float: left;
+}
+
+
+
+#lateral{
+	width: 25%;
+	height: auto;
+	float: left;
+	padding-left: 20px;
+	padding/-right: 20px;
+	box-sizing: border-box;
+}
+
+#meio{
+	width: 75%;
+	height: auto;
+	float: right;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding/-right: 20px;
+}
+
+.categorias{
+	list-style-type: none;
+	text-align: left;
+	padding-top: 10px;
+	margin-bottom: 40px;	
+}
+
+.categorias li{
+	border-bottom: 1px solid #ccc;
+}
+
+.categorias li a{
+	padding: 5px 20px 5px 30px;
+	display: block;
+	font-size: 12px;
+	text-decoration: none;
+	color: #0d64a0;
+}
+
+.categorias li a:hover{
+	color: orange;
+	background: #0d64a0;
+}
+
+/*NOTICIA*/
+.noticia{
+	padding: 20px 20px 40px 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted orange;
+	display: block;
+	clear: both;
+}
+
+.noticia:last-child{
+	border-bottom: none;
+}
+
+.noticia .titulo{
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	margin-bottom: 30px;
+}
+
+.noticia .subtitulo{
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 15px;
+	margin-top: 20px;
+}
+
+.noticia p{
+	line-height: 20px;
+}
+
+.noticia img{
+	width: 200px;
+	height: 150px;
+	margin: 10px;
+	display: block;
+	border: 1px solid #ccc;
+}
+
+
+/*LOJA*/
+#catloja{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	margin: 20px auto;
+	
+}
+
+#catloja a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	
+}
+
+#catloja .catlojaimg{
+	border-radius: 50%;
+	background-color: orange;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #ccc;
+	line-height: 150px;
+	transition: all .3s ease;
+}
+
+#catloja span{
+	opacity: 0;
+	transition: all .3s ease;
+}
+
+#catloja a:hover span{
+	opacity: 1;
+}
+
+#catloja a:hover .catlojaimg{
+	background-image: none !important;
+}
+
+
+/*CADASTRO*/
+#area h1 {	
+	
+	text-decoration : bold ;
+	color : #e95a32 ;
+	font-size : 25px ;
+	margin-bottom: 10px;
+}
+
+#area h3 {	
+	
+	text-decoration : bold ;
+	color : #e95a32 ;
+	
+}
+
+#area{
+	float:left;
+	width:550px;
+	height:550px;
+	margin-top:25px;
+	margin-left:15px;	
+}
+
+#area2{
+	
+	float:right;
+	margin-right:80px;
+	width:300px;
+	height:500px;
+	margin-top:25px;
+	background: url('../img/cachorro.jpg');	
+}
+
+
+#cadastrar input.campo_nome{
+	
+	width:300px;
+	margin-bottom:20px;
+	
+	
+	
+}
+#cadastrar input.campo_senha{
+	
+	width:300px;
+	margin-bottom:20px;
+	
+	
+	
+}
+#cadastrar input.campo_email{
+	
+	width:300px;
+	margin-bottom:20px;
+	
+	
+	
+}
+#cadastrar input.campo_tel{
+	
+	
+	width:300px;
+	margin-bottom:20px;
+}
+
+#cadastrar input.caixa_animal{
+	margin-right:10px;
+	margin-left:10px;
+	width:20px;
+	
+}
+#cadastrar{
+	
+	
+	color : #e95a32 ;
+	
+}
+
+#botao{
+	
+	top:755px;
+	position:absolute;
+	
+	
+	
+}
+
+
+/*RODAPÉ*/
+#rodape {
+	width: 100%;
+	padding: 10px 10px;
+	border-top: 1px dotted gray;
+	clear: both;
+	display: block;
+	margin-top: 30px;
+}
+
+#rodape a {
+	display: inline-block;
+	margin-left: 5px;
+	color: white;
+	outline: none;
+	text-decoration: none;
+	background: black;
+	padding: 5px 0;
+	border-radius: 3px;
+	transition: all .3s ease;
+	width: 25px;
+	text-align: center;
+}
+
+#rodape a:hover{
+	background: #0d64a0;
+	color: rgba(233,90,50,1);
+}
+
+#rodape span{
+	float: right;
+	margin-top: 5px;
+	font-size: 12px;
+}
+

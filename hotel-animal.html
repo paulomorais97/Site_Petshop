@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel Animal - Distrito dos Pets</title>
+
+		<!-- CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" class="active" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" class="active" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html" title="Contato">Contato</a></li>
+					
+				</ul>
+			</div>
+
+			
+
+
+			<div id="conteudo">
+			
+				<h1>Hotel Animal</h1>
+
+				<div class="central">
+				
+					
+					<div class="colunas">
+						<div class="image" style="background-image: url(https://cdn.pixabay.com/photo/2017/09/02/08/53/golden-retriever-puppy-2706673__340.jpg);">
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante euismod mi efficitur consectetur. Etiam ut rhoncus est. Quisque vestibulum risus consequat tristique mollis. </p>
+						
+					</div>
+
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="https://web.facebook.com/Petshop-Distrito-dos-Pets-2032756690321103/"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/distritodospets/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); }
+		</script>
+	</body>
+</html>

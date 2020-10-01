@@ -1,0 +1,189 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Leva e Traz - Distrito dos Pets</title>
+
+		<!-- CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" class="active" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html"	class="active" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html" title="Contatos">Contato</a></li>
+					
+				</ul>
+			</div>
+
+			
+
+<div id="conteudo" >
+				<br>
+				
+				<div class="central">
+			<h1>Leva e Traz
+			</h1>
+				
+				<br>
+				<h2>Agendamento do Serviço</h2>
+				<br>
+				
+				<br>
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	
+	<form id="frmleva">
+		<label for="cep">CEP</label>
+		<input id="cep" type="text" required/><br>
+		<label for="logradouro">Logradouro</label>
+		<input id="logradouro" type="text" required/>
+		<label for="numero">Número</label>
+		<input id="numero" type="text" />
+		<label for="complemento">Complemento</label>
+		<input id="complemento" type="text"/>
+		<label for="bairro">Bairro</label>
+		<input id="bairro" type="text" required/>
+		<label for="uf">Estado</label>
+		<select id="uf">
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
+	</form>
+	
+	<script type="text/javascript">
+		$("#cep").focusout(function(){
+			
+			$.ajax({
+				
+				url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				
+				dataType: 'json',
+				
+				success: function(resposta){
+					
+					$("#logradouro").val(resposta.logradouro);
+					$("#complemento").val(resposta.complemento);
+					$("#bairro").val(resposta.bairro);
+					$("#cidade").val(resposta.localidade);
+					$("#uf").val(resposta.uf);
+					
+					$("#numero").focus();
+				}
+			});
+		});
+	</script>
+		<br>
+		<b>Data:</b>
+					<input	type="date" id="{identificação}" name="{nome}"	Value="{data formato 2018-MM-DD}">
+					
+					<b>Horário:</b>
+					<input type="time" id="hOc"	name="hOc"	value="08:00">
+				<form>
+				<input type="submit" name="b1" value="Agendar"	onclick="alert('Visita agendada com sucesso')">
+				</form>
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="https://web.facebook.com/Petshop-Distrito-dos-Pets-2032756690321103/"><i class="fa fa-facebook"></i></a>
+				<a href="https://www.instagram.com/distritodospets/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); }
+		</script>
+	</body>
+</html>

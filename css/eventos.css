@@ -1,0 +1,271 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 10px 0;
+	font-family: Lucida Sans ;
+	background: url(https://avada.theme-fusion.com/veterinarian/wp-content/uploads/sites/80/2016/11/pets_big.png) bottom center no-repeat;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	border : 2px solid #e95a32;
+	background: rgba(255,255,255,.8);
+}
+
+#header {
+	height: 200px ;
+	width: 100%;
+	position: relative;
+}
+
+#login {
+	width: 400px;
+	height: 130px;
+	display: block;
+	position: absolute;
+	top: 35px;
+	right: 50px;
+	background: rgba(13,100,160,0.8);
+	padding: 10px 30px;
+	border-radius: 10px;
+	font-family: Tahoma ;
+}
+
+form {
+	padding-top: 10px;
+}
+
+form label {
+	display: inline-block;
+	width: 20%;
+	color: white;
+}
+
+form input {
+	display: inline-block;
+	width: 75%;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+form input[type="submit"], .botao{
+	background: rgba(233,90,50,1);
+	color: white;
+	width: 100px;
+	font-weight: bold;
+	float: right;
+	margin-right: 12px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border: 2px solid rgba(233,90,50,1);
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+form input[type="submit"]:hover, .botao:hover{
+	background: rgba(13,100,160,1);
+}
+
+.botao {
+	font-size: 12px;
+}
+
+#menu {
+	padding: 0px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 30px;
+	position: relative;
+	background-color:#0d64a0;
+	font-family: Tahoma ;
+}
+
+#menu ul {
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+#menu ul li { 
+	position: : relative;
+	display: inline-block;
+	padding: 0;
+}
+
+#menu ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 5px 10px;
+	display: block;
+	background: #0d64a0;
+	transition: all .2s ease;
+}
+
+#menu ul li a:hover {
+	color: orange;
+	background: #055184;
+}
+
+#menu ul li ul {
+	position:absolute; 
+	display:none;
+	width: 150px;
+	text-align: left;
+	z-index: 9999;
+}
+
+#menu ul li:hover ul, #menu ul li.over ul{
+	display:block;
+}
+
+#menu ul li ul li{
+	display:block; 
+	width:150px;
+	background-color:#0d64a0;
+}
+#menu ul li ul li a{
+	padding: 4px 10px;
+}
+
+
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0; 
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px; 
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8); 
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center; 
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0; 
+}
+
+
+
+#conteudo {
+	margin-bottom: 50px;
+}
+
+#conteudo h1 {	
+	text-align : center ;
+	text-decoration : bold ;
+	color : #e95a32 ;
+	font-size : 40px ;
+	margin-bottom: 20px;
+	font-family: Lucida Sans Unicode ;
+}
+
+.central{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+.colunas{
+	width: 275px;
+	border: 1px solid #e5e5e5;
+	margin: 10px 10px;
+	padding: 10px 0px;
+	box-sizing: border-box;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.colunas h2{
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: Trebuchet MS ;
+}
+
+.colunas .image {
+	width: 100%;
+	max-width: 100%;
+	height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.colunas p{
+	font-size: 14px;
+	text-align: left;
+	padding: 10px;
+	font-family: Tahoma ;
+}
+
+#rodape {
+	width: 100%;
+	padding: 10px 10px;
+	border-top: 1px dotted gray;
+	font-family: Tahoma ;
+}
+
+#rodape a {
+	display: inline-block;
+	margin-left: 5px;
+	color: white;
+	outline: none;
+	text-decoration: none;
+	background: black;
+	padding: 5px 0;
+	border-radius: 3px;
+	transition: all .3s ease;
+	width: 25px;
+	text-align: center;
+}
+
+#rodape a:hover{
+	background: #0d64a0;
+	color: rgba(233,90,50,1);
+}
+
+#rodape span{
+	float: right;
+	margin-top: 5px;
+	font-size: 12px;
+}

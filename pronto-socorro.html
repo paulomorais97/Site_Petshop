@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pronto Socorro - Distrito dos Pets</title>
+
+		<!-- CSS -->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				
+				
+				<div id="login">
+					<form action="servidor.html"
+							method="post"
+							enctype="multipart/form-data">
+						
+						<label>Email:</label>
+						<input type="text"
+							   name="usuario"
+							   >
+						<br>
+						<label>Senha:</label>
+						<input type="password"
+							   name="senha">
+						
+						<input type="submit" value="Entrar">
+					</form>
+				</div>
+				
+			</div>
+			
+			<div id="menu">
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="empresa.html" title="Empresa">Empresa</a></li>
+					<li><a href="servicos.html" class="active" title="Serviços">Serviços <i class="fa fa-angle-down"></i></a>
+						<ul>
+							<li><a href="banho-e-tosa.html" title="Banho e Tosa">Banho e Tosa</a></li>
+							<li><a href="consultas.html" title="Consultas Agendadas">Consultas Agendadas</a></li>
+							<li><a href="pronto-socorro.html" class="active" title="Pronto Socorro">Pronto Socorro</a></li>
+							<li><a href="leva-e-traz.html" title="Leva e Traz">Leva e Traz</a></li>
+							<li><a href="hotel-animal.html" title="Hotel Animal">Hotel Animal</a></li>
+						</ul>
+					</li>
+					<li><a href="loja.html" title="Loja Virtual">Loja Virtual</a></li>
+					<li><a href="galeria.html" title="Galeria">Galeria</a></li>
+					<li><a href="racas.html" title="Raças">Raças</a></li>
+					<li><a href="eventos.html" title="Eventos">Eventos</a></li>
+					<li><a href="equipe.html" title="Equipe">Equipe</a></li>
+					<li><a href="adocao.html" title="Adoção de Pets">Adoção de Pets</a></li>
+					<li><a href="blog.html" title="Blog">Blog</a></li>
+					<li><a href="contato.html" title="Contato">Contato</a></li>
+					
+				</ul>
+			</div>
+
+			
+
+
+			<div id="conteudo" style="padding: 30px">
+			
+				<h1>Pronto Socorro Animal</h1>
+
+				<div class="central">
+				
+					
+						<img class="image4 fright" src="img/cachorro-3.jpg" alt="Pronto Socorro">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante euismod mi efficitur consectetur. Etiam ut rhoncus est. Quisque vestibulum risus consequat tristique mollis. Nunc ac maximus risus, tristique efficitur sapien. Mauris vehicula nulla id nulla hendrerit fringilla. Fusce elementum molestie elit, id venenatis elit facilisis sed. Proin et sem hendrerit, ultricies metus at, auctor velit. Nullam magna lacus, sollicitudin eu augue vitae, semper mattis justo. Donec fermentum nulla et risus semper finibus. Curabitur congue rutrum quam, et ornare est sagittis in.<br><br>
+
+						Nullam sed purus bibendum, ullamcorper ipsum pharetra, dictum urna. Nullam metus ex, porta sit amet rhoncus id, facilisis vitae orci. Ut cursus purus quis dui lacinia tincidunt. Aliquam at augue maximus, suscipit tortor sed, suscipit ligula. Maecenas eu dictum magna, sit amet auctor lectus. Praesent sed ipsum leo. In metus dui, molestie iaculis congue blandit, sollicitudin a nibh.</p>
+						
+
+				</div>
+				
+			</div>
+	 
+		
+			<div id="rodape">
+				Não perca nenhuma novidade
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<span>Distrito dos Pets 2018 - Todos os direitos reservados &copy;</span>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); }
+		</script>
+	</body>
+</html>
